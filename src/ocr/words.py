@@ -116,7 +116,7 @@ def _text_detect(img, image, join=False):
     mask = np.zeros(small.shape, np.uint8)
     cnt, hierarchy = cv2.findContours(np.copy(small),
                                            cv2.RETR_CCOMP,
-                                           cv2.CHAIN_APPROX_SIMPLE)
+                                           cv2.CHAIN_APPROX_SIMPLE)[-2:]
     
     index = 0    
     boxes = []
